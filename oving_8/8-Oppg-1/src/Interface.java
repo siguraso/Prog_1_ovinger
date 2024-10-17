@@ -46,6 +46,8 @@ public class Interface {
 
     public static void displayGeneralInfo(ArbTaker arbTaker, Scanner sc) {
         System.out.println("Arbeidstaker: " + arbTaker.getFormalName() +
+                "\nFødselsdag: " + + arbTaker.getDOB().get(Calendar.DAY_OF_MONTH) + "." + arbTaker.getDOB().get(Calendar.MONTH) +
+                "." + arbTaker.getDOB().get(Calendar.YEAR) +
                 "\nAlder: " + arbTaker.getAge() +
                 "\nAntall år i bedriften: " + arbTaker.getWorkAge() +
                 "\nSkattetrekk pr. måned: " + arbTaker.monthlyTaxPayments() +
@@ -106,5 +108,4 @@ public class Interface {
             break;
         }
     }
-
 }
