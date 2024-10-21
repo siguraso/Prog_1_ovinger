@@ -3,7 +3,7 @@ public class Student {
     private int antOppg;
 
     /**
-     * Student ID.
+     * Overview over the amount of tasks that a student has completed and approved.
      * @param name
      * The student's name.
      * @param antOppg
