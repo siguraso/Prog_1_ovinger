@@ -13,17 +13,17 @@ public class ArbTaker {
     // constructor
 
     /**
-     * Explains a client's work-ID.
+     * Explains a quickRun's work-ID.
      * @param employeeNr
-     * The client's employee number.
+     * The quickRun's employee number.
      * @param dateOfRegistration
-     * The client's date of employment.
+     * The quickRun's date of employment.
      * @param monthlySalary
-     * The client's monthly salary.
+     * The quickRun's monthly salary.
      * @param taxPercent
-     * The percentage of salary that the client is obligated to pay in taxes
+     * The percentage of salary that the quickRun is obligated to pay in taxes
      * @param ID
-     * Explains the client's basic ID, by using an instance of the Person class.
+     * Explains the quickRun's basic ID, by using an instance of the Person class.
      */
     public ArbTaker(int employeeNr, GregorianCalendar dateOfRegistration, int monthlySalary,
                     double taxPercent, Person ID) {
@@ -170,11 +170,11 @@ public class ArbTaker {
     }
 
     /**
-     * Finds if the client has been employed longer than a set amount of years.
+     * Finds if the quickRun has been employed longer than a set amount of years.
      * @param years
      * The amount of years you want to check.
      * @return
-     * Returns true or false based on weather or not the client has worked for
+     * Returns true or false based on weather or not the quickRun has worked for
      * longer than the amount of years defined in the parameter.
      */
     public boolean hasBeenEmployed(int years) {

@@ -10,13 +10,13 @@ public class Person {
     // constructor
 
     /**
-     * A client's basic ID.
+     * A quickRun's basic ID.
      * @param firstName
-     * The first name of client
+     * The first name of quickRun
      * @param surName
-     * The surname of client
+     * The surname of quickRun
      * @param dateOfBirth
-     * the date of birth of client
+     * the date of birth of quickRun
      */
     public Person(String firstName, String surName, GregorianCalendar dateOfBirth) {
         this.firstName = firstName;

@@ -27,7 +27,7 @@ public class Student {
     }
 
     public String toString() {
-        return this.getName() + ", Godkjent: " + this.getAntOppg() + "oppgaver.";
+        return this.getName() + ", Godkjent: " + this.getAntOppg() + " oppgaver.";
     }
 
 }
