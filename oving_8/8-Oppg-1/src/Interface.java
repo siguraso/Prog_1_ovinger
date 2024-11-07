@@ -14,7 +14,7 @@ public class Interface {
 
         Scanner sc = new Scanner(System.in);
 
-        ChoiceWindow mainMenu = new ChoiceWindow();
+        choiceWindow mainMenu = new choiceWindow();
         mainMenu.addChoice("Vis arbeidstakerens informasjon.");
         mainMenu.addChoice("Endre lønn eller skatteprosent.");
         mainMenu.addChoice("Avslutt programmet.");
@@ -62,7 +62,7 @@ public class Interface {
     }
 
     public static void changeInfo(ArbTaker arbTaker, Scanner sc) {
-        ChoiceWindow infoChange = new ChoiceWindow();
+        choiceWindow infoChange = new choiceWindow();
 
         infoChange.addChoice("Endre skatteprosenten.");
         infoChange.addChoice("Endre måneds-lønn.");
