@@ -43,8 +43,6 @@ public class ArrangementRegister {
       String timeString = arrangement.getTime() + "";
       String dateOnly = timeString.substring(0, timeString.length() - 4);
 
-      System.out.println(dateOnly);
-
       if (date.equalsIgnoreCase((dateOnly))) {
         searchResults.add(arrangement);
       }

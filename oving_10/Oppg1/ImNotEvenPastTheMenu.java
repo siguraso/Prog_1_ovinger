@@ -1,8 +1,7 @@
-import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class InNotEvenPastTheMenu {
+public class ImNotEvenPastTheMenu {
   public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
 
@@ -20,10 +19,11 @@ public class InNotEvenPastTheMenu {
       clearScreen();
       for (Arrangement arrangement : ar.getArrangements()) {
         System.out.println(arrangement.getName() + ", " + arrangement.getLocation() +
-            ", " + arrangement.getTypeOfArrangement() + ", " + arrangement.getTime());
+            ", " + arrangement.getTypeOfArrangement() + ", " + arrangement.getTime() + ", " +
+            arrangement.getArrangementID() + ", " + arrangement.getArranger());
       }
 
-      int mainmenuchoice = mainMenu.choiceSequnce("What would you like yo do?", sc);
+      int mainmenuchoice = mainMenu.choiceSequnce("\nWhat would you like yo do?", sc);
 
       switch (mainmenuchoice) {
         case 1:
@@ -52,12 +52,14 @@ public class InNotEvenPastTheMenu {
 
   public static void addNewArrangement(Scanner sc, ArrangementRegister ar) {
     clearScreen();
+    sc.nextLine();
     System.out.println("what is the name of the arrangement?");
     String name = sc.nextLine();
 
     System.out.println("what is the time of the arrangement? (YYYYMMDDHHMM)");
     long date = sc.nextLong();
 
+    sc.nextLine();
     System.out.println("where is the arrangement?");
     String location = sc.nextLine();
 
@@ -67,6 +69,7 @@ public class InNotEvenPastTheMenu {
     System.out.println("what is the ID of the arrangement?");
     int id = sc.nextInt();
 
+    sc.nextLine();
     System.out.println("who is arranging?");
     String arranger = sc.nextLine();
 
@@ -75,6 +78,7 @@ public class InNotEvenPastTheMenu {
 
   public static void searchByDate(Scanner sc, ArrangementRegister ar) {
     clearScreen();
+    sc.nextLine();
     System.out.println("enter the date you want to search by (YYYYMMDD)");
     String date = sc.nextLine();
 
@@ -100,12 +104,15 @@ public class InNotEvenPastTheMenu {
 
     ArrayList<Arrangement> searchResults = ar.searchBetweenDates(start, end);
 
+    clearScreen();
+    System.out.println("search results:\n\n");
     for (Arrangement arrangement : searchResults) {
       System.out.println(arrangement.getName() + ", " + arrangement.getLocation() +
           ", " + arrangement.getTypeOfArrangement() + ", " + arrangement.getTime());
       }
 
     System.out.println("press ENTER to continue.");
+    sc.nextLine();
     sc.nextLine();
 
   }
